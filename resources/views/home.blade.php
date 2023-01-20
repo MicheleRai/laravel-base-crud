@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fumetti</title>
 </head>
-<body>
-    <h1>Benvenuti!, siete nella HOME</h1>
-</body>
+@extends('layouts.base')
+@section('content')
+    <body>
+        <h1>Benvenuti!, siete nella HOME</h1>
+    </body>
+@endsection
 </html>

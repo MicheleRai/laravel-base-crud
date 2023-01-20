@@ -9,10 +9,9 @@
 <body>
     @include('partials.header')
     <div>
-        <h1>@yield('title')</h1>
         <main>
             @yield('content')
-        S</main>
+        </main>
     </div>
 </body>
 </html>
