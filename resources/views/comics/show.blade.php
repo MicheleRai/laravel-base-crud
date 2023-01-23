@@ -12,6 +12,7 @@
                 <p class="card-text">{{$comic->type}}</p>
                 <p class="card-text">${{$comic->price}}</p>
                 <p class="card-text">{{$comic->description}}</p>
+                <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning">Modifica</a>
             </div>
         </div>
     </div>

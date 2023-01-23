@@ -1,15 +1,17 @@
 @extends('layouts.base')
 
 @section('content')
-<form class="my-5" method="post" action="{{ route('comics.store') }}" style="width: 600px">
+<form class="my-5" method="post" action="{{ route('comics.update', ['comic' => $comic]) }}" style="width: 600px">>
     @csrf()
+    @method('put')
     <div class="mb-3">
         <label for="title" class="form-label">Titolo</label>
         <input
         type="string"
         class="form-control"
         id="title"
-        name="title">
+        name="title"
+        value="{{ $comic->title }}">
 
     </div>
 
@@ -21,7 +23,7 @@
         id="description"
         name="description"
         value="{{ $comic->description }}"> --}}
-        <textarea class="form-control" name="description" id="description"></textarea>
+        <textarea class="form-control" name="description" id="description">{{ $comic->description }}</textarea>
 
     </div>
 
@@ -31,7 +33,9 @@
         type="text"
         class="form-control"
         id="thumb"
-        name="thumb">
+        name="thumb"
+        value="{{ $comic->thumb }}">
+        {{-- <textarea name="thumb" id="thumb" cols="30" rows="10">{{ $comic->thumb }}</textarea> --}}
 
     </div>
     <div class="mb-3">
@@ -40,7 +44,8 @@
         type="number"
         class="form-control"
         id="price"
-        name="price">
+        name="price"
+        value="{{ $comic->price }}">
 
     </div>
     <div class="mb-3">
@@ -49,7 +54,8 @@
         type="string"
         class="form-control"
         id="series"
-        name="series">
+        name="series"
+        value="{{ $comic->series }}">
 
     </div>
     <div class="mb-3">
@@ -58,7 +64,8 @@
         type="date"
         class="form-control"
         id="sale_date"
-        name="sale_date">
+        name="sale_date"
+        value="{{ $comic->sale_date }}">
 
     </div>
     <div class="mb-3">
@@ -67,7 +74,8 @@
         type="string"
         class="form-control"
         id="type"
-        name="type">
+        name="type"
+        value="{{ $comic->type }}">
 
     </div>
 

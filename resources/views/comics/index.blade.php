@@ -9,6 +9,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$comic->series}}</h5>
                     <a href="{{ route('comics.show', ['comic' => $comic->id])}}" class="btn btn-primary">Info</a>
+                    <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning">Modifica</a>
                 </div>
             </div>
         </div>
