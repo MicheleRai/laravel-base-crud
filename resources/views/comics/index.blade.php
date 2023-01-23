@@ -3,7 +3,7 @@
 @section('content')
 <div class="container row aligns-items-center justify-content-center">
     @foreach ($comics as $comic)
-        <div class="col-sm-4 mb-5">
+        <div class="col-sm-4 my-3">
             <div class="card text-center" style="width: 20rem">
                 <img class="card-img-top" src="{{$comic->thumb}}" alt="copertina">
                 <div class="card-body">
