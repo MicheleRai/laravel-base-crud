@@ -13,6 +13,11 @@
                 <p class="card-text">${{$comic->price}}</p>
                 <p class="card-text">{{$comic->description}}</p>
                 <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning">Modifica</a>
+                <form class="m-1" action="{{ route('comics.edit', ['comic' => $comic->id]) }} " method="post">
+                    @method('DELETE')
+                    @csrf
+                    <button class="btn btn-danger">ELIMINA</button>
+                </form>
             </div>
         </div>
     </div>
